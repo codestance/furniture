@@ -1,0 +1,221 @@
+@import 'compass/css3';
+@import '_reset';
+@import '_variables';
+@import '_nav';
+@import '_mixins';
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext');
+
+
+html,body {
+	font-family:'Lato';
+	scroll-behavior: smooth;
+}
+
+h1{
+	font-size: 1.7em;
+	font-weight: 900;
+	color: $light-blue;
+	letter-spacing: 0.3em;
+}
+h2{
+	color: $light-blue;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	text-shadow: -1px 0 $grey, 0 1px $grey, 1px 0 $grey, 0 -1px $grey;
+}
+h3{
+	color: $orange;
+}
+
+.btn-menu{
+	@media(min-width: $large){
+		display: none;
+	}
+}
+.menu-mobile{
+	@extend .menu;
+    position: fixed;
+    width: 100%;
+	height: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+.menu-open{
+	visibility: visible;
+	opacity: 1;
+	height: 100vh;
+	@include transition-property(height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(linear);
+}
+.menu-landscape{
+	@extend .menu;
+	display: none;
+	@media(min-width: $large){
+		grid-area: menu;
+		border-top: solid 2px $light-blue;
+		height: auto;
+    	@include display-flex;
+    	@include justify-content(space-around);
+    	padding: 5px 0;
+    	margin: 0;
+	}
+}
+.link{
+	text-decoration: none;
+	color: $light-grey;
+	&:hover, &:focus{
+			color: $orange;
+		}
+}
+
+.menu-link{
+	@extend .link;
+	font-weight: bolder;
+}
+
+p{
+	text-align: justify;
+	font-weight: lighter;
+}
+
+.site{
+	width: 100vw;
+	min-height: 100vh;
+	height: auto;
+	@media (min-width: $small) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto 1fr 1fr auto;
+		grid-template-areas: 	"header header"
+								"article article"
+								"sofa corner"
+								"sofa3 bed"
+								"footer footer";
+
+	}
+	@media (min-width: $large) {
+		display: grid;
+		grid-template-columns: 2fr 2fr 1.5fr;
+		grid-template-rows: auto auto auto 1fr 1fr;
+		grid-template-areas: 	"header header header"
+								"menu menu menu"
+								"article article footer"
+								"sofa corner footer"
+								"sofa3 bed footer";
+
+	}
+}
+
+img{
+ 	display: block;
+ 	max-width: 100%;
+    height: auto;
+ }
+
+
+header{
+	width: 100%;
+	grid-area: header;
+	@include display-flex;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	float: left;
+	@include justify-content(center);
+	background: $grey;
+}
+
+.logo-box{
+	position: relative;
+	@include flexbox((flex-basis: 150px));
+	@include display-flex;
+	@include justify-content(center);
+	min-height: 80px;
+	img{
+		position: absolute;
+    	margin: auto;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+	}
+}
+.title-box{
+	text-align: center;
+	padding: 0 40px 0 40px;
+}
+
+article{
+	background: $white;
+	grid-area: article;
+	clear: both;
+	p{
+		color:$grey;
+		letter-spacing: 0.1em;
+	}
+}
+.about{
+	padding: 10px 45px 10px 20px;
+}
+
+.furniture{
+	min-height: 150px;
+	text-align: center;
+	border: 1px solid $orange;
+	@include display-flex;
+	@include align-items(center);
+    @include justify-content(center);
+}
+.sofa{
+	@include furniture-background('../images/sof.jpg');
+	grid-area: sofa;
+}
+.corner{
+	@include furniture-background('../images/naroznik.jpg');
+	grid-area: corner;
+}
+.sofa3{
+	@include furniture-background('../images/sof3d.jpg');
+	grid-area: sofa3;
+}
+.bed{
+	@include furniture-background('../images/lozko.jpg');
+	grid-area: bed;
+}
+
+footer{
+	padding: 10px;
+	background: $light-grey;
+	grid-area: footer;
+	p{
+		color:$grey;
+	}
+}
+.contact{
+	width: 100%;
+	padding-bottom: 10px;
+}
+.contact-img{
+	height: 20px;
+	width: 20px;
+	float: left;
+	margin-right: 5px;
+	clear: both;
+}
+.info{
+	padding-bottom: 10px;
+}
+.info-p{
+	overflow: auto;
+	text-align: left;
+}
+.contact-link{
+	@extend .link;
+	color: $grey;
+}
+
+#map{
+	width: 100%;
+	height: 15em;
+	max-height: 300px;
+}

@@ -1,0 +1,11 @@
+$(function(){
+	$('#btn').click(function(){
+		$(this).toggleClass('menu-button_open');
+	});
+	$('#btn').click(function(){
+		$('.menu-mobile').toggleClass('menu-open');
+	});
+	$('#btn').click(function(){
+		$('.menu-span').toggleClass('menu-span-open');
+	});
+});

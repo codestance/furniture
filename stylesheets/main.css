@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext");
+/* line 2, ../sass/_reset.scss */
+html, body {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 11, ../sass/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 17, ../sass/_reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 5, ../sass/_nav.scss */
+.btn, .btn-menu {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  z-index: 999;
+}
+
+/* line 12, ../sass/_nav.scss */
+.btn-menu {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+/* line 19, ../sass/_nav.scss */
+.menu-span {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  background: #ff6a19;
+}
+/* line 28, ../sass/_nav.scss */
+.menu-span:nth-child(1) {
+  top: 0;
+}
+/* line 31, ../sass/_nav.scss */
+.menu-span:nth-child(2) {
+  top: 10px;
+}
+/* line 34, ../sass/_nav.scss */
+.menu-span:nth-child(3) {
+  top: 20px;
+}
+
+/* line 40, ../sass/_nav.scss */
+.menu-span-open:nth-child(1) {
+  top: 12px;
+  transform: rotate(45deg);
+  transition: 1s;
+}
+/* line 45, ../sass/_nav.scss */
+.menu-span-open:nth-child(2) {
+  opacity: 0;
+  transition: width 1s;
+}
+/* line 49, ../sass/_nav.scss */
+.menu-span-open:nth-child(3) {
+  top: 12px;
+  transform: rotate(-45deg);
+  transition: 1s;
+}
+
+/* line 56, ../sass/_nav.scss */
+.menu, .menu-mobile, .menu-landscape {
+  list-style: none;
+  padding: 50px 0 10px 0;
+  margin: 0;
+  text-align: center;
+  background: #656a6c;
+}
+
+/* line 65, ../sass/_nav.scss */
+.menu-item {
+  text-transform: uppercase;
+  padding: 5px 0 10px 0;
+}
+
+/* line 4, ../sass/_base.scss */
+html, body {
+  font-family: 'Lato';
+  scroll-behavior: smooth;
+}
+
+/* line 9, ../sass/_base.scss */
+h1 {
+  font-size: 1.7em;
+  font-weight: 900;
+  color: #1eeee6;
+  letter-spacing: 0.3em;
+}
+
+@media (min-width: 1025px) {
+  /* line 16, ../sass/_base.scss */
+  .btn-menu {
+    display: none;
+  }
+}
+
+/* line 21, ../sass/_base.scss */
+.menu-mobile {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 9;
+}
+
+/* line 31, ../sass/_base.scss */
+.menu-open {
+  visibility: visible;
+  opacity: 1;
+  height: 100vh;
+  -moz-transition-property: height;
+  -o-transition-property: height;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+/* line 39, ../sass/_base.scss */
+.menu-landscape {
+  display: none;
+}
+@media (min-width: 1025px) {
+  /* line 39, ../sass/_base.scss */
+  .menu-landscape {
+    grid-area: menu;
+    border-top: solid 2px #1eeee6;
+    height: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    padding: 5px 0 0 0;
+    margin: 0;
+  }
+}
+
+/* line 52, ../sass/_base.scss */
+.link, .menu-link, .contact-link {
+  text-decoration: none;
+}
+
+/* line 56, ../sass/_base.scss */
+.menu-link {
+  font-weight: bolder;
+  color: #f2f2f2;
+}
+/* line 60, ../sass/_base.scss */
+.menu-link:hover, .menu-link:focus {
+  color: #ff6a19;
+}
+
+/* line 65, ../sass/_base.scss */
+p {
+  text-align: justify;
+  font-weight: lighter;
+}
+
+/* line 70, ../sass/_base.scss */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 76, ../sass/_base.scss */
+header {
+  width: 100%;
+  grid-area: header;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #656a6c;
+}
+
+/* line 87, ../sass/_base.scss */
+.logo-box {
+  position: relative;
+  -webkit-flex-basis: 150px;
+  flex-basis: 150px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-height: 80px;
+}
+/* line 93, ../sass/_base.scss */
+.logo-box img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 102, ../sass/_base.scss */
+.title-box {
+  text-align: center;
+  padding: 0 40px 0 40px;
+}
+
+/* line 21, ../sass/main.scss */
+h2 {
+  color: #1eeee6;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: -1px 0 #656a6c, 0 1px #656a6c, 1px 0 #656a6c, 0 -1px #656a6c;
+}
+
+/* line 27, ../sass/main.scss */
+h3 {
+  color: #ff6a19;
+}
+
+/* line 83, ../sass/main.scss */
+.site {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+}
+@media (min-width: 600px) {
+  /* line 83, ../sass/main.scss */
+  .site {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr 1fr auto;
+    grid-template-areas: "header header" "article article" "sofa corner" "sofa3 bed" "footer footer";
+  }
+}
+@media (min-width: 1025px) {
+  /* line 83, ../sass/main.scss */
+  .site {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    grid-template-rows: auto auto auto 1fr 1fr;
+    grid-template-areas: "header header header" "menu menu menu" "article article footer" "sofa corner footer" "sofa3 bed footer";
+  }
+}
+
+/* line 149, ../sass/main.scss */
+article {
+  background: #fff;
+  grid-area: article;
+  clear: both;
+}
+/* line 153, ../sass/main.scss */
+article p {
+  color: #656a6c;
+  letter-spacing: 0.1em;
+}
+
+/* line 158, ../sass/main.scss */
+.about {
+  padding: 10px 45px 10px 20px;
+}
+
+/* line 162, ../sass/main.scss */
+.furniture {
+  min-height: 150px;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #ff6a19;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 171, ../sass/main.scss */
+.sofa {
+  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/sof.jpg");
+  background-size: cover;
+  repeat: no-repeat;
+  grid-area: sofa;
+}
+
+/* line 175, ../sass/main.scss */
+.corner {
+  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/naroznik.jpg");
+  background-size: cover;
+  repeat: no-repeat;
+  grid-area: corner;
+}
+
+/* line 179, ../sass/main.scss */
+.sofa3 {
+  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/sof3d.jpg");
+  background-size: cover;
+  repeat: no-repeat;
+  grid-area: sofa3;
+}
+
+/* line 183, ../sass/main.scss */
+.bed {
+  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/lozko.jpg");
+  background-size: cover;
+  repeat: no-repeat;
+  grid-area: bed;
+}
+
+/* line 188, ../sass/main.scss */
+footer {
+  padding: 10px;
+  background: #f2f2f2;
+  grid-area: footer;
+}
+/* line 192, ../sass/main.scss */
+footer p {
+  color: #656a6c;
+}
+
+/* line 196, ../sass/main.scss */
+.contact {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+/* line 200, ../sass/main.scss */
+.contact-img {
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin-right: 5px;
+  clear: both;
+}
+
+/* line 207, ../sass/main.scss */
+.info {
+  padding-bottom: 10px;
+}
+
+/* line 210, ../sass/main.scss */
+.info-p {
+  overflow: auto;
+  text-align: left;
+}
+
+/* line 214, ../sass/main.scss */
+.contact-link {
+  color: #656a6c;
+}
+
+/* line 219, ../sass/main.scss */
+#map {
+  width: 100%;
+  height: 15em;
+  max-height: 300px;
+}

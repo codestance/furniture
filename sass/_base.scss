@@ -1,0 +1,105 @@
+@import '_variables';
+@import '_nav';
+
+html,body {
+	font-family:'Lato';
+	scroll-behavior: smooth;
+}
+
+h1{
+	font-size: 1.7em;
+	font-weight: 900;
+	color: $light-blue;
+	letter-spacing: 0.3em;
+}
+
+.btn-menu{
+	@media(min-width: $large){
+		display: none;
+	}
+}
+.menu-mobile{
+	@extend .menu;
+    position: fixed;
+    width: 100%;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+	opacity: 0;
+	z-index: 9;
+}
+.menu-open{
+	visibility: visible;
+	opacity: 1;
+	height: 100vh;
+	@include transition-property(height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(linear);
+}
+.menu-landscape{
+	@extend .menu;
+	display: none;
+	@media(min-width: $large){
+		grid-area: menu;
+		border-top: solid 2px $light-blue;
+		height: auto;
+    	@include display-flex;
+    	@include justify-content(space-around);
+    	padding: 5px 0 0 0;
+    	margin: 0;
+	}
+}
+.link{
+	text-decoration: none;
+}
+
+.menu-link{
+	@extend .link;
+	font-weight: bolder;
+	color: $light-grey;
+	&:hover, &:focus{
+			color: $orange;
+		}
+}
+
+p{
+	text-align: justify;
+	font-weight: lighter;
+}
+
+img{
+ 	display: block;
+ 	max-width: 100%;
+    height: auto;
+ }
+
+header{
+	width: 100%;
+	grid-area: header;
+	@include display-flex;
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	// float: left;
+	@include justify-content(center);
+	background: $grey;
+}
+
+.logo-box{
+	position: relative;
+	@include flexbox((flex-basis: 150px));
+	@include display-flex;
+	@include justify-content(center);
+	min-height: 80px;
+	img{
+		position: absolute;
+    	margin: auto;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+	}
+}
+.title-box{
+	text-align: center;
+	padding: 0 40px 0 40px;
+}
