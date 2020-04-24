@@ -1,20 +1,18 @@
-@import 'compass/css3';
 @import '_reset';
 @import '_variables';
 @import '_nav';
 @import '_mixins';
 @import '_base';
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext');
 
 h2{
-	color: $light-blue;
+	color: $two;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	text-shadow: -1px 0 $grey, 0 1px $grey, 1px 0 $grey, 0 -1px $grey;
 }
 
 h3{
-	color: $orange;
+	color: $three;
 }
 
 .site{
@@ -63,9 +61,9 @@ article{
 	height: 100%;
 	text-align: center;
 	border: 1px solid $orange;
-	@include display-flex;
-	@include align-items(center);
-    @include justify-content(center);
+	display:flex;
+	align-items: center;
+    justify-content: center;
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     	height: 100px;
     	min-height: 200px;

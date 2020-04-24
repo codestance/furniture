@@ -1,9 +1,9 @@
-@import 'compass/css3';
 @import '_reset';
 @import '_variables';
 @import '_nav';
 @import '_mixins';
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
 
 html,body {
@@ -44,9 +44,9 @@ h3{
 	visibility: visible;
 	opacity: 1;
 	height: 100vh;
-	@include transition-property(height);
-    @include transition-duration(.5s);
-    @include transition-timing-function(linear);
+	transition-property: height;
+    transition-duration: .5s;
+    transition-timing-function: linear;
 }
 .menu-landscape{
 	@extend .menu;
@@ -55,8 +55,8 @@ h3{
 		grid-area: menu;
 		border-top: solid 2px $light-blue;
 		height: auto;
-    	@include display-flex;
-    	@include justify-content(space-around);
+    	display: flex;
+    	justify-content: space-around;
     	padding: 5px 0;
     	margin: 0;
 	}
@@ -117,19 +117,19 @@ img{
 header{
 	width: 100%;
 	grid-area: header;
-	@include display-flex;
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	float: left;
-	@include justify-content(center);
+	justify-content: center;
 	background: $grey;
 }
 
 .logo-box{
 	position: relative;
-	@include flexbox((flex-basis: 150px));
-	@include display-flex;
-	@include justify-content(center);
+	display: flex;
+	justify-content: center;
+	flex-basis: 150px;
 	min-height: 80px;
 	img{
 		position: absolute;
@@ -162,9 +162,9 @@ article{
 	min-height: 150px;
 	text-align: center;
 	border: 1px solid $orange;
-	@include display-flex;
-	@include align-items(center);
-    @include justify-content(center);
+	display: flex;
+	align-items: center;
+    justify-content: center;
 }
 .sofa{
 	@include furniture-background('../images/sof.jpg');

@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_nav';
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 
 html,body {
 	font-family:'Lato';
@@ -7,10 +8,11 @@ html,body {
 }
 
 h1{
-	font-size: 1.7em;
-	font-weight: 900;
-	color: $light-blue;
-	letter-spacing: 0.3em;
+	font-family: "Lora";
+	font-size: 2.5em;
+	// font-weight: 900;
+	color: $three;
+	// letter-spacing: 0.3em;
 }
 
 .btn-menu{
@@ -32,9 +34,9 @@ h1{
 	visibility: visible;
 	opacity: 1;
 	height: 100vh;
-	@include transition-property(height);
-    @include transition-duration(.5s);
-    @include transition-timing-function(linear);
+	transition-property: height;
+    transition-duration: .5s;
+    transition-timing-function: linear;
 }
 .menu-landscape{
 	@extend .menu;
@@ -43,8 +45,8 @@ h1{
 		grid-area: menu;
 		border-top: solid 2px $light-blue;
 		height: auto;
-    	@include display-flex;
-    	@include justify-content(space-around);
+    	display: flex;
+    	justify-content: space-around;
     	padding: 5px 0 0 0;
     	margin: 0;
 	}
@@ -76,19 +78,18 @@ img{
 header{
 	width: 100%;
 	grid-area: header;
-	@include display-flex;
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
-	// float: left;
-	@include justify-content(center);
-	background: $grey;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	// background: $grey;
 }
 
 .logo-box{
 	position: relative;
-	@include flexbox((flex-basis: 150px));
-	@include display-flex;
-	@include justify-content(center);
+	display: flex;
+	justify-content: center;
+	flex-basis: 150px;
 	min-height: 80px;
 	img{
 		position: absolute;

@@ -1,11 +1,9 @@
-@import 'compass/css3';
 @import '_reset';
 @import '_variables';
 @import '_nav';
 @import '_mixins';
 @import '_base';
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext');
-
 
 .site{
 	min-height: 100vh;
