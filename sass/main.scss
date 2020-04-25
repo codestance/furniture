@@ -44,11 +44,11 @@ h3{
 }
 
 article{
-	background: $white;
+	background: $one;
 	grid-area: article;
 	clear: both;
 	p{
-		color:$grey;
+		color:$four;
 		letter-spacing: 0.1em;
 	}
 }
@@ -100,10 +100,11 @@ article{
 
 footer{
 	padding: 10px;
-	background: $light-grey;
+	// background: $light-grey;
+	background: $four;
 	grid-area: footer;
 	p{
-		color:$grey;
+		color: white;
 	}
 }
 .contact{

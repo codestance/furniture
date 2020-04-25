@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap");
 html, body {
   font-family: "Lato" sans-serif;
+  font-weight: 300;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   margin: 0;
@@ -17,32 +18,32 @@ a:hover {
   outline: 0; }
 
 .btn, .btn-menu {
-  width: 30px;
-  height: 30px;
+  width: 2em;
+  height: 2em;
   background: transparent;
   border: none;
   z-index: 999; }
 
 .btn-menu {
   position: fixed;
-  right: 10px;
-  top: 10px; }
+  right: 1em;
+  top: 1em; }
 
 .menu-span {
   position: absolute;
   display: block;
-  height: 4px;
+  height: .25em;
   width: 100%;
-  border-radius: 3px;
+  border-radius: .2em;
   opacity: 1;
   left: 0;
-  background: #ff6a19; }
+  background: #30e3ca; }
   .menu-span:nth-child(1) {
     top: 0; }
   .menu-span:nth-child(2) {
-    top: 10px; }
+    top: 0.67em; }
   .menu-span:nth-child(3) {
-    top: 20px; }
+    top: 1.3em; }
 
 .menu-span-open:nth-child(1) {
   top: 12px;
@@ -60,40 +61,39 @@ a:hover {
   list-style: none;
   padding: 50px 0 10px 0;
   margin: 0;
-  text-align: center;
-  background: #656a6c; }
+  text-align: center; }
 
 .menu-item {
   text-transform: uppercase;
-  padding: 5px 0 10px 0; }
+  padding: .5em 0 1.5em 0; }
 
 .btn, .btn-menu {
-  width: 30px;
-  height: 30px;
+  width: 2em;
+  height: 2em;
   background: transparent;
   border: none;
   z-index: 999; }
 
 .btn-menu {
   position: fixed;
-  right: 10px;
-  top: 10px; }
+  right: 1em;
+  top: 1em; }
 
 .menu-span {
   position: absolute;
   display: block;
-  height: 4px;
+  height: .25em;
   width: 100%;
-  border-radius: 3px;
+  border-radius: .2em;
   opacity: 1;
   left: 0;
-  background: #ff6a19; }
+  background: #30e3ca; }
   .menu-span:nth-child(1) {
     top: 0; }
   .menu-span:nth-child(2) {
-    top: 10px; }
+    top: 0.67em; }
   .menu-span:nth-child(3) {
-    top: 20px; }
+    top: 1.3em; }
 
 .menu-span-open:nth-child(1) {
   top: 12px;
@@ -111,19 +111,20 @@ a:hover {
   list-style: none;
   padding: 50px 0 10px 0;
   margin: 0;
-  text-align: center;
-  background: #656a6c; }
+  text-align: center; }
 
 .menu-item {
   text-transform: uppercase;
-  padding: 5px 0 10px 0; }
+  padding: .5em 0 1.5em 0; }
 
 html, body {
   font-family: 'Lato';
   scroll-behavior: smooth; }
 
+h1, h2, h3 {
+  font-family: "Lora"; }
+
 h1 {
-  font-family: "Lora";
   font-size: 2.5em;
   color: #30e3ca; }
 
@@ -143,6 +144,7 @@ h1 {
 .menu-open {
   visibility: visible;
   opacity: 1;
+  background: #2f89fc;
   height: 100vh;
   transition-property: height;
   transition-duration: .5s;
@@ -153,25 +155,31 @@ h1 {
   @media (min-width: 1025px) {
     .menu-landscape {
       grid-area: menu;
-      border-top: solid 2px #1eeee6;
       height: auto;
       display: flex;
       justify-content: space-around;
-      padding: 5px 0 0 0;
+      padding: .5em 0 1em 0;
       margin: 0; } }
 
 .link, .menu-link, .contact-link {
   text-decoration: none; }
 
+@media (min-width: 1025px) {
+  .menu-item {
+    padding: 0.5em 0 0 0; } }
+
 .menu-link {
   font-weight: bolder;
-  color: #f2f2f2; }
+  color: #f5f5f5;
+  border-bottom: transparent solid .1em; }
   .menu-link:hover, .menu-link:focus {
-    color: #ff6a19; }
+    border-bottom: #30e3ca solid 0.1em; }
+  @media (min-width: 1025px) {
+    .menu-link {
+      color: #40514e; } }
 
 p {
-  text-align: justify;
-  font-weight: lighter; }
+  text-align: justify; }
 
 img {
   display: block;
@@ -231,11 +239,11 @@ h3 {
       grid-template-areas: "header header header" "menu menu menu" "article article footer" "sofa corner footer" "sofa3 bed footer"; } }
 
 article {
-  background: #fff;
+  background: #f5f5f5;
   grid-area: article;
   clear: both; }
   article p {
-    color: #656a6c;
+    color: #40514e;
     letter-spacing: 0.1em; }
 
 .about {
@@ -300,10 +308,10 @@ article {
 
 footer {
   padding: 10px;
-  background: #f2f2f2;
+  background: #40514e;
   grid-area: footer; }
   footer p {
-    color: #656a6c; }
+    color: white; }
 
 .contact {
   width: 100%;

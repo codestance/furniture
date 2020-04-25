@@ -1,10 +1,6 @@
-nav{
-	// position: absolute;
-}
-
 .btn{
-	width: 30px;
-	height: 30px;
+	width: 2em;
+	height: 2em;
 	background: transparent;
 	border: none;
 	z-index: 999;
@@ -12,27 +8,27 @@ nav{
 .btn-menu{
 	@extend .btn;
 	position: fixed;
-	right: 10px;
-	top: 10px;
+	right: 1em;
+	top: 1em;
 }
-
 .menu-span{
 	position: absolute;
 	display: block;
-	height: 4px;
+	height: .25em;
 	width: 100%;
-	border-radius: 3px;
+	border-radius: .2em;
 	opacity: 1;
 	left: 0;
-	background: #ff6a19;
+	background: #30e3ca;
 	&:nth-child(1){
 		top: 0;
 	}
 	&:nth-child(2){
-		top: 10px;
+		// top: 10px;
+		top: .67em
 	}
 	&:nth-child(3){
-		top: 20px;
+		top: 1.3em;
 	}
 }
 
@@ -54,27 +50,14 @@ nav{
 }
 
 .menu{
-	// display: none;
 	list-style: none;
 	padding: 50px 0 10px 0;
 	margin: 0;
 	text-align:center;
-    background: #656a6c;
 }
 
 .menu-item{
 	text-transform: uppercase;
-	padding: 5px 0 10px 0;
+	padding: .5em 0 1.5em 0;
 }
-
-// @keyframes menu-button-active{
-// 	0% {
-// 		transform: rotate(0deg);
-// 		transform-origin: left;
-// 	}
-// 	100% {
-// 		transform: rotate(45deg);
-// 		transform-origin: left;
-// 	}
-// }
 
