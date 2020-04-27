@@ -6,9 +6,9 @@
 
 h2{
 	color: $two;
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
-	text-shadow: -1px 0 $grey, 0 1px $grey, 1px 0 $grey, 0 -1px $grey;
+	// text-transform: uppercase;
+	// letter-spacing: 0.15em;
+	// text-shadow: -1px 0 $grey, 0 1px $grey, 1px 0 $grey, 0 -1px $grey;
 }
 
 h3{
@@ -32,7 +32,7 @@ h3{
 	}
 	@media (min-width: $large) {
 		display: grid;
-		grid-template-columns: 2fr 2fr 1.5fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: auto auto auto 1fr 1fr;
 		grid-template-areas: 	"header header header"
 								"menu menu menu"
@@ -53,7 +53,16 @@ article{
 	}
 }
 .about{
-	padding: 10px 45px 10px 20px;
+	padding: 1em 1.5em 1em 1.5em;
+	p{
+		text-align: justify;
+	}
+	@media (min-width: $large){
+		padding: 1em 2em 1em 2em;
+		p{
+			text-align: left;
+		}
+	}
 }
 
 .furniture{
@@ -99,7 +108,7 @@ article{
 }
 
 footer{
-	padding: 10px;
+	padding: 1em;
 	// background: $light-grey;
 	background: $four;
 	grid-area: footer;
@@ -110,20 +119,6 @@ footer{
 .contact{
 	width: 100%;
 	padding-bottom: 10px;
-}
-.contact-img{
-	height: 20px;
-	width: 20px;
-	float: left;
-	margin-right: 5px;
-	clear: both;
-}
-.info{
-	padding-bottom: 10px;
-}
-.info-p{
-	overflow: auto;
-	text-align: left;
 }
 .contact-link{
 	@extend .link;

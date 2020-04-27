@@ -13,6 +13,12 @@ h1{
 	font-size: 2.5em;
 	color: $three;
 }
+h2{
+	font-size: 2em;
+}
+h3{
+	font-size: 1.5em;
+}
 .btn-menu{
 	@media(min-width: $large){
 		display: none;
@@ -72,7 +78,7 @@ h1{
 }
 
 p{
-	text-align: justify;
+	// text-align: justify;
 	// font-weight: lighter;
 }
 
