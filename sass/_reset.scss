@@ -12,7 +12,12 @@ html,body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-a:active,
-a:hover{
-	outline:0;
+a{
+	text-decoration: none;
+	&:active, &:hover{
+		outline: 0;
+	}
+}
+p{
+	margin: 0;
 }

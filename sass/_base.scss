@@ -1,23 +1,14 @@
 @import '_variables';
 @import '_nav';
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
-
 html,body {
 	font-family:'Lato';
 	scroll-behavior: smooth;
 }
-h1,h2,h3{
-	font-family: "Lora";
-}
 h1{
 	font-size: 2.5em;
 	color: $three;
-}
-h2{
-	font-size: 2em;
-}
-h3{
-	font-size: 1.5em;
+	font-family: "Lora";
 }
 .btn-menu{
 	@media(min-width: $large){
@@ -56,16 +47,12 @@ h3{
     	margin: 0;
 	}
 }
-.link{
-	text-decoration: none;
-}
 .menu-item{
 	@media(min-width: $large){
 		padding: 0.5em 0 0 0;
 	}
 }
 .menu-link{
-	@extend .link;
 	font-weight: bolder;
 	color: $one;
 	border-bottom: transparent solid .1em;
@@ -76,18 +63,11 @@ h3{
 		color: $four;
 	}
 }
-
-p{
-	// text-align: justify;
-	// font-weight: lighter;
-}
-
 img{
  	display: block;
  	max-width: 100%;
     height: auto;
  }
-
 header{
 	width: 100%;
 	grid-area: header;
@@ -95,9 +75,7 @@ header{
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	// background: $grey;
 }
-
 .logo-box{
 	position: relative;
 	display: flex;

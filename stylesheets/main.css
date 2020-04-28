@@ -13,9 +13,13 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-a:active,
-a:hover {
-  outline: 0; }
+a {
+  text-decoration: none; }
+  a:active, a:hover {
+    outline: 0; }
+
+p {
+  margin: 0; }
 
 .btn, .btn-menu {
   width: 2em;
@@ -121,18 +125,10 @@ html, body {
   font-family: 'Lato';
   scroll-behavior: smooth; }
 
-h1, h2, h3 {
-  font-family: "Lora"; }
-
 h1 {
   font-size: 2.5em;
-  color: #30e3ca; }
-
-h2 {
-  font-size: 2em; }
-
-h3 {
-  font-size: 1.5em; }
+  color: #30e3ca;
+  font-family: "Lora"; }
 
 @media (min-width: 1025px) {
   .btn-menu {
@@ -166,9 +162,6 @@ h3 {
       justify-content: space-around;
       padding: .5em 0 1em 0;
       margin: 0; } }
-
-.link, .menu-link, .contact-link {
-  text-decoration: none; }
 
 @media (min-width: 1025px) {
   .menu-item {
@@ -257,61 +250,60 @@ article {
         text-align: left; } }
 
 .furniture {
-  min-height: 150px;
+  min-height: 12em;
   height: 100%;
   text-align: center;
-  border: 1px solid #ff6a19;
   display: flex;
   align-items: center;
   justify-content: center; }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .furniture {
-      height: 100px;
-      min-height: 200px; } }
 
 .sofa {
-  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/sof.jpg");
+  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
   background-size: cover;
   repeat: no-repeat;
   grid-area: sofa; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .sofa {
-      background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/sofie.jpg");
+      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
       background-size: cover;
       repeat: no-repeat; } }
 
 .corner {
-  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/naroznik.jpg");
+  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
   background-size: cover;
   repeat: no-repeat;
   grid-area: corner; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .corner {
-      background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/naroznikie.jpg");
+      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
       background-size: cover;
       repeat: no-repeat; } }
 
 .sofa3 {
-  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/sof3d.jpg");
+  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
   background-size: cover;
   repeat: no-repeat;
   grid-area: sofa3; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .sofa3 {
-      background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/sof3die.jpg");
+      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
       background-size: cover;
       repeat: no-repeat; } }
 
 .bed {
-  background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/lozko.jpg");
+  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
   background-size: cover;
   repeat: no-repeat;
   grid-area: bed; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .bed {
-      background-image: linear-gradient(90deg, rgba(101, 106, 108, 0.5), rgba(101, 106, 108, 0.5)), url("../images/lozkoie.jpg");
+      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
       background-size: cover;
       repeat: no-repeat; } }
+
+.category {
+  font-size: 2em;
+  font-family: "Lora"; }
 
 footer {
   padding: 1em;
@@ -323,13 +315,18 @@ footer {
 .contact {
   width: 100%;
   padding-bottom: 10px; }
-
-.contact-link {
-  color: #656a6c; }
+  .contact .contact-header {
+    font-size: 1.5em;
+    font-family: "Lora";
+    color: #30e3ca; }
+  .contact .contact-link {
+    display: inline;
+    color: white;
+    padding-left: .25em; }
 
 #map {
   width: 100%;
   height: 15em;
-  max-height: 300px; }
+  max-height: 19em; }
 
 /*# sourceMappingURL=main.css.map */

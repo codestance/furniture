@@ -66,17 +66,18 @@ article{
 }
 
 .furniture{
-	min-height: 150px;
+	min-height: 12em;
+	// max-height: 450px;
 	height: 100%;
 	text-align: center;
-	border: 1px solid $orange;
+	// border: 1px solid $two;
 	display:flex;
 	align-items: center;
     justify-content: center;
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	height: 100px;
-    	min-height: 200px;
-	}
+    // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    // 	height: 100px;
+    // 	min-height: 200px;
+	// }
 }
 .sofa{
 	@include furniture-background('../images/sof.jpg');
@@ -86,25 +87,29 @@ article{
 	grid-area: sofa;
 }
 .corner{
-	@include furniture-background('../images/naroznik.jpg');
+	@include furniture-background('../images/sof.jpg');
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	@include furniture-background('../images/naroznikie.jpg');
+    	@include furniture-background('../images/sofie.jpg');
 	}
 	grid-area: corner;
 }
 .sofa3{
-	@include furniture-background('../images/sof3d.jpg');
+	@include furniture-background('../images/sof.jpg');
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	@include furniture-background('../images/sof3die.jpg');
+    	@include furniture-background('../images/sofie.jpg');
 	}
 	grid-area: sofa3;
 }
 .bed{
-	@include furniture-background('../images/lozko.jpg');
+	@include furniture-background('../images/sof.jpg');
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	@include furniture-background('../images/lozkoie.jpg');
+    	@include furniture-background('../images/sofie.jpg');
 	}
 	grid-area: bed;
+}
+.category{
+	font-size: 2em;
+	font-family: "Lora";
 }
 
 footer{
@@ -119,14 +124,19 @@ footer{
 .contact{
 	width: 100%;
 	padding-bottom: 10px;
+	.contact-header{
+		font-size: 1.5em;
+		font-family: "Lora";
+		color: $three;
+	}
+	.contact-link{
+		display: inline;
+		color: white;
+		padding-left: .25em;
+	}
 }
-.contact-link{
-	@extend .link;
-	color: $grey;
-}
-
 #map{
 	width: 100%;
 	height: 15em;
-	max-height: 300px;
+	max-height: 19em;
 }

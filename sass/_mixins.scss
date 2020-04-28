@@ -1,5 +1,5 @@
 @mixin furniture-background($imigpath){
-	background-image: linear-gradient(90deg,rgba($grey,.5),rgba($grey,.5)),url($imigpath);
+	background-image: linear-gradient(90deg,rgba($two,.5),rgba($one,.5)),url($imigpath);
 	background-size: cover;
 	repeat: no-repeat;
 }
