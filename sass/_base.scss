@@ -42,7 +42,6 @@ h1{
 	display: none;
 	@media(min-width: $large){
 		grid-area: menu;
-		// border-top: solid 2px $two;
 		height: auto;
     	display: flex;
     	justify-content: space-around;

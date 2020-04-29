@@ -3,15 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Meble Kraszewice - producent mebli tapicerowanych">
 	<title>Meble Kraszewice</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/icons.css">
 	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
 	<script src="https://openlayers.org/en/v4.6.5/build/ol.js" type="text/javascript"></script>
 </head>
-
 <body>
-
 	<nav>
 		<button class="btn-menu" type="button" id="btn">
 			<span class="menu-span"></span>
@@ -28,6 +27,12 @@
 		</ul>
 	</nav>
 	<div class="site">
+		<header>
+			<div class="logo-box"><img src="" alt="LOGO"></div>
+			<div class="title-box">
+				<h1>Meble Kraszewice</h1>
+			</div>
+		</header>
 		<ul class="menu-landscape">
 			<a href="index.html" class="menu-link"><li class="menu-item">Strona główna</li></a>
 			<a href="technologia.html" class="menu-link"><li class="menu-item">Technologia</li></a>
@@ -36,12 +41,6 @@
 			<a href="sofy3dl.html" class="menu-link"><li class="menu-item">Sofy 3DL</li></a>
 			<a href="kanapy-lozka.html" class="menu-link"><li class="menu-item">Kanapy i łóżka</li></a>
 		</ul>
-		<header>
-			<div class="logo-box"><img src="" alt="LOGO"></div>
-			<div class="title-box">
-				<h1>Meble Kraszewice</h1>
-			</div>
-		</header>
 		<article>
 			<p>
 				Fabryka Mebli "Mebele Kraszewice" powstała w 1991 roku w Kraszewicach.
@@ -54,28 +53,11 @@
 			</p>
 		</article>
 		<section>
-
+			<img class="slider" src="images/sof.jpg" alt="zdjecie0">
+			<img class="slider" src="images/sof2.jpg" alt="zdjecie1">	
+			<img class="slider" src="images/sof.jpg" alt="zdjecie2">
+			<img class="slider" src="images/sof2.jpg" alt="zdjecie3">
 		</section>
-		<!-- <a href="sofy.html" class="link">
-			<div class="furniture sofa">
-				<p class="category">Sofy</p>
-			</div>
-		</a>
-		<a href="narozniki.html" class="link">
-			<div class="furniture corner">
-				<p class="category">Narożniki</p>
-			</div>
-		</a>
-		<a href="sofy3dl.html" class="link">
-			<div class="furniture sofa3">
-				<p class="category">Sofy 3DL</p>
-			</div>
-		</a>
-		<a href="kanapy-lozka.html" class="link">
-			<div class="furniture bed">
-				<p class="category">Kanapy i łóżka</p>
-			</div>
-		</a> -->
 		<footer>
 			<p class="contact-header">Zapraszamy do kontaktu i zakupów</p>
 			<p>
@@ -123,6 +105,7 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="javascript/menu.js" type="text/javascript"></script>
+	<script src="javascript/slider.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		var attribution = new ol.control.Attribution({
         	collapsible: false

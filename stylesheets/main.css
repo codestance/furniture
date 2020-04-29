@@ -230,9 +230,9 @@ h3 {
   @media (min-width: 992px) {
     .site {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
       grid-template-rows: auto auto auto 1fr 1fr;
-      grid-template-areas: "header header header" "menu menu menu" "article article footer" "section section footer" "section section footer"; } }
+      grid-template-areas: "header header" "menu menu" "article footer" "section footer" "section footer"; } }
 
 article {
   grid-area: article;
@@ -246,6 +246,27 @@ article {
       padding: 1em 2em 1em 2em; }
       article p {
         text-align: left; } }
+
+section {
+  grid-area: section;
+  padding: 1em;
+  min-height: 16em;
+  position: relative; }
+  @media (min-width: 576px) {
+    section {
+      min-height: 18em; } }
+  @media (min-width: 768px) {
+    section {
+      min-height: 20em; } }
+  section img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1em 1em 1em 0 rgba(64, 81, 78, 0.75);
+    margin: auto; }
 
 footer {
   grid-area: footer;

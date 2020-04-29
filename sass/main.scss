@@ -6,11 +6,7 @@
 
 h2{
 	color: $two;
-	// text-transform: uppercase;
-	// letter-spacing: 0.15em;
-	// text-shadow: -1px 0 $grey, 0 1px $grey, 1px 0 $grey, 0 -1px $grey;
 }
-
 h3{
 	color: $three;
 }
@@ -32,13 +28,13 @@ h3{
 	}
 	@media (min-width: $large) {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 2fr 1fr;
 		grid-template-rows: auto auto auto 1fr 1fr;
-		grid-template-areas: 	"header header header"
-								"menu menu menu"
-								"article article footer"
-								"section section footer"
-								"section section footer";
+		grid-template-areas: 	"header header"
+								"menu menu"
+								"article footer"
+								"section footer"
+								"section footer";
 
 	}
 }
@@ -59,52 +55,32 @@ article{
 	}
 }
 
-// .furniture{
-// 	min-height: 12em;
-// 	// max-height: 450px;
-// 	height: 100%;
-// 	text-align: center;
-// 	// border: 1px solid $two;
-// 	display:flex;
-// 	align-items: center;
-//     justify-content: center;
-//     // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-//     // 	height: 100px;
-//     // 	min-height: 200px;
-// 	// }
-// }
-// .sofa{
-// 	@include furniture-background('../images/sof.jpg');
-// 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-//     	@include furniture-background('../images/sofie.jpg');
-// 	}
-// 	grid-area: sofa;
-// }
-// .corner{
-// 	@include furniture-background('../images/sof.jpg');
-// 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-//     	@include furniture-background('../images/sofie.jpg');
-// 	}
-// 	grid-area: corner;
-// }
-// .sofa3{
-// 	@include furniture-background('../images/sof.jpg');
-// 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-//     	@include furniture-background('../images/sofie.jpg');
-// 	}
-// 	grid-area: sofa3;
-// }
-// .bed{
-// 	@include furniture-background('../images/sof.jpg');
-// 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-//     	@include furniture-background('../images/sofie.jpg');
-// 	}
-// 	grid-area: bed;
-// }
-// .category{
-// 	font-size: 2em;
-// 	font-family: "Lora";
-// }
+section{
+	grid-area: section;
+	padding: 1em;
+	min-height: 16em;
+	position: relative;
+	@media (min-width: $small){
+		min-height: 18em;
+	}
+	@media (min-width: $medium){
+		min-height: 20em;
+	}
+	// div{
+	// 	height: inherit;
+	// 	position: relative;
+	// }
+	img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: auto;
+		height: 90%;
+		transform: translate(-50%, -50%);
+		box-shadow: 1em 1em 1em 0 rgba($four,.75);
+		margin: auto;
+	}
+}
 
 footer{
 	grid-area: footer;
