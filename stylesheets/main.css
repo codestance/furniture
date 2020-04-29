@@ -226,86 +226,26 @@ h3 {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto 1fr 1fr auto;
-      grid-template-areas: "header header" "article article" "sofa corner" "sofa3 bed" "footer footer"; } }
+      grid-template-areas: "header header" "article article" "section section" "section section" "footer footer"; } }
   @media (min-width: 992px) {
     .site {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto auto auto 1fr 1fr;
-      grid-template-areas: "header header header" "menu menu menu" "article article footer" "sofa corner footer" "sofa3 bed footer"; } }
+      grid-template-areas: "header header header" "menu menu menu" "article article footer" "section section footer" "section section footer"; } }
 
 article {
-  background: #f5f5f5;
   grid-area: article;
-  clear: both; }
-  article p {
-    color: #40514e; }
-
-.about {
+  background: #f5f5f5;
   padding: 1em 1.5em 1em 1.5em; }
-  .about p {
+  article p {
+    color: #40514e;
     text-align: justify; }
   @media (min-width: 992px) {
-    .about {
+    article {
       padding: 1em 2em 1em 2em; }
-      .about p {
+      article p {
         text-align: left; } }
-
-.furniture {
-  min-height: 12em;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.sofa {
-  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
-  background-size: cover;
-  repeat: no-repeat;
-  grid-area: sofa; }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .sofa {
-      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
-      background-size: cover;
-      repeat: no-repeat; } }
-
-.corner {
-  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
-  background-size: cover;
-  repeat: no-repeat;
-  grid-area: corner; }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .corner {
-      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
-      background-size: cover;
-      repeat: no-repeat; } }
-
-.sofa3 {
-  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
-  background-size: cover;
-  repeat: no-repeat;
-  grid-area: sofa3; }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .sofa3 {
-      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
-      background-size: cover;
-      repeat: no-repeat; } }
-
-.bed {
-  background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sof.jpg");
-  background-size: cover;
-  repeat: no-repeat;
-  grid-area: bed; }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .bed {
-      background-image: linear-gradient(90deg, rgba(47, 137, 252, 0.5), rgba(245, 245, 245, 0.5)), url("../images/sofie.jpg");
-      background-size: cover;
-      repeat: no-repeat; } }
-
-.category {
-  font-size: 2em;
-  font-family: "Lora"; }
 
 footer {
   grid-area: footer;
