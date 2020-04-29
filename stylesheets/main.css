@@ -124,13 +124,16 @@ p {
 html, body {
   font-family: 'Lato';
   scroll-behavior: smooth; }
+  @media (min-width: 1200px) {
+    html, body {
+      font-size: 18px; } }
 
 h1 {
   font-size: 2.5em;
   color: #30e3ca;
   font-family: "Lora"; }
 
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
   .btn-menu {
     display: none; } }
 
@@ -154,7 +157,7 @@ h1 {
 
 .menu-landscape {
   display: none; }
-  @media (min-width: 1025px) {
+  @media (min-width: 992px) {
     .menu-landscape {
       grid-area: menu;
       height: auto;
@@ -163,7 +166,7 @@ h1 {
       padding: .5em 0 1em 0;
       margin: 0; } }
 
-@media (min-width: 1025px) {
+@media (min-width: 992px) {
   .menu-item {
     padding: 0.5em 0 0 0; } }
 
@@ -173,7 +176,7 @@ h1 {
   border-bottom: transparent solid .1em; }
   .menu-link:hover, .menu-link:focus {
     border-bottom: #30e3ca solid 0.1em; }
-  @media (min-width: 1025px) {
+  @media (min-width: 992px) {
     .menu-link {
       color: #40514e; } }
 
@@ -218,13 +221,13 @@ h3 {
   width: 100%;
   min-height: 100vh;
   height: auto; }
-  @media (min-width: 600px) {
+  @media (min-width: 576px) {
     .site {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto 1fr 1fr auto;
       grid-template-areas: "header header" "article article" "sofa corner" "sofa3 bed" "footer footer"; } }
-  @media (min-width: 1025px) {
+  @media (min-width: 992px) {
     .site {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -236,14 +239,13 @@ article {
   grid-area: article;
   clear: both; }
   article p {
-    color: #40514e;
-    letter-spacing: 0.1em; }
+    color: #40514e; }
 
 .about {
   padding: 1em 1.5em 1em 1.5em; }
   .about p {
     text-align: justify; }
-  @media (min-width: 1025px) {
+  @media (min-width: 992px) {
     .about {
       padding: 1em 2em 1em 2em; }
       .about p {
@@ -306,27 +308,29 @@ article {
   font-family: "Lora"; }
 
 footer {
-  padding: 1em;
+  grid-area: footer;
   background: #40514e;
-  grid-area: footer; }
+  padding: 1em; }
   footer p {
     color: white; }
-
-.contact {
-  width: 100%;
-  padding-bottom: 10px; }
-  .contact .contact-header {
+  footer .contact-header {
     font-size: 1.5em;
     font-family: "Lora";
-    color: #30e3ca; }
-  .contact .contact-link {
-    display: inline;
+    color: #30e3ca;
+    padding-bottom: .5em; }
+  footer .contact-link {
+    display: inline-block;
+    vertical-align: middle;
     color: white;
-    padding-left: .25em; }
-
-#map {
-  width: 100%;
-  height: 15em;
-  max-height: 19em; }
+    padding: .5em 0; }
+    footer .contact-link span {
+      display: inline;
+      vertical-align: middle;
+      padding-right: .4em; }
+  footer .map-container {
+    padding-top: .5em;
+    width: 100%;
+    height: 15em;
+    max-height: 19em; }
 
 /*# sourceMappingURL=main.css.map */

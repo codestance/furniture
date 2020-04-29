@@ -4,6 +4,9 @@
 html,body {
 	font-family:'Lato';
 	scroll-behavior: smooth;
+	@media(min-width: $xLarge){
+		font-size: 18px;
+	}
 }
 h1{
 	font-size: 2.5em;
