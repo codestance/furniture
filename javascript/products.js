@@ -1,6 +1,6 @@
 var wW;
 var wH;
-var small = 600;
+var small = 576;
 
 var prodImg = document.getElementsByClassName('product-img');
 var prodAmounth = prodImg.length;
@@ -13,14 +13,11 @@ var picHeight;
 $(window).on('resize',function(){
 	wW = $(window).width();
 	wH = $(window).height();
-	picHeight = $(picBox).outerHeight();
+	// picHeight = $(picBox).outerHeight();
 }).trigger('resize');
 
-
 $(document).ready(function() {
-
 	$(drag[0]).draggable();
-
 	function showHideImg(){	
 		if(wW>small){
 			var pic = $('<img />', {src: $(this).attr('src')});
@@ -36,15 +33,11 @@ $(document).ready(function() {
 			}
 		}
 		if(wW<=small){
+			$(picBox).css('height',$(picBox).outerHeight());
 			$(this).toggleClass('drag-around');
-			$(picBox).css('height',picHeight);
 		}
 	}
-
 	for(var i=0; i<prodAmounth; i++){
 		prodImg[i].addEventListener('click',showHideImg,false);
 	}
- 
 });
-
-

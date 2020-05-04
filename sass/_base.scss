@@ -1,18 +1,18 @@
 @import '_variables';
 @import '_nav';
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 html,body {
 	font-family:'Lato';
 	scroll-behavior: smooth;
+	@media(min-width: $xLarge){
+		font-size: 18px;
+	}
 }
-
 h1{
-	font-size: 1.7em;
-	font-weight: 900;
-	color: $light-blue;
-	letter-spacing: 0.3em;
+	font-size: 2.5em;
+	color: $three;
+	font-family: "Lora";
 }
-
 .btn-menu{
 	@media(min-width: $large){
 		display: none;
@@ -31,64 +31,58 @@ h1{
 .menu-open{
 	visibility: visible;
 	opacity: 1;
+	background: $two;
 	height: 100vh;
-	@include transition-property(height);
-    @include transition-duration(.5s);
-    @include transition-timing-function(linear);
+	transition-property: height;
+    transition-duration: .5s;
+    transition-timing-function: linear;
 }
 .menu-landscape{
 	@extend .menu;
 	display: none;
 	@media(min-width: $large){
 		grid-area: menu;
-		border-top: solid 2px $light-blue;
 		height: auto;
-    	@include display-flex;
-    	@include justify-content(space-around);
-    	padding: 5px 0 0 0;
+    	display: flex;
+    	justify-content: space-around;
+    	padding: .5em 0 1em 0;
     	margin: 0;
 	}
 }
-.link{
-	text-decoration: none;
+.menu-item{
+	@media(min-width: $large){
+		padding: 0.5em 0 0 0;
+	}
 }
-
 .menu-link{
-	@extend .link;
 	font-weight: bolder;
-	color: $light-grey;
+	color: $one;
+	border-bottom: transparent solid .1em;
 	&:hover, &:focus{
-			color: $orange;
+			border-bottom: $three solid .1em;
 		}
+	@media(min-width: $large){
+		color: $four;
+	}
 }
-
-p{
-	text-align: justify;
-	font-weight: lighter;
-}
-
 img{
  	display: block;
  	max-width: 100%;
     height: auto;
  }
-
 header{
 	width: 100%;
 	grid-area: header;
-	@include display-flex;
-	@include flex-direction(row);
-	@include flex-wrap(wrap);
-	// float: left;
-	@include justify-content(center);
-	background: $grey;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-
 .logo-box{
 	position: relative;
-	@include flexbox((flex-basis: 150px));
-	@include display-flex;
-	@include justify-content(center);
+	display: flex;
+	justify-content: center;
+	flex-basis: 150px;
 	min-height: 80px;
 	img{
 		position: absolute;

@@ -1,22 +1,15 @@
-@import 'compass/css3';
 @import '_reset';
 @import '_variables';
 @import '_nav';
 @import '_mixins';
 @import '_base';
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext');
 
 h2{
-	color: $light-blue;
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
-	text-shadow: -1px 0 $grey, 0 1px $grey, 1px 0 $grey, 0 -1px $grey;
+	color: $two;
 }
-
 h3{
-	color: $orange;
+	color: $three;
 }
-
 .site{
 	width: 100%;
 	min-height: 100vh;
@@ -27,112 +20,88 @@ h3{
 		grid-template-rows: auto auto 1fr 1fr auto;
 		grid-template-areas: 	"header header"
 								"article article"
-								"sofa corner"
-								"sofa3 bed"
+								"section section"
+								"section section"
 								"footer footer";
 
 	}
 	@media (min-width: $large) {
 		display: grid;
-		grid-template-columns: 2fr 2fr 1.5fr;
+		grid-template-columns: 2fr 1fr;
 		grid-template-rows: auto auto auto 1fr 1fr;
-		grid-template-areas: 	"header header header"
-								"menu menu menu"
-								"article article footer"
-								"sofa corner footer"
-								"sofa3 bed footer";
+		grid-template-areas: 	"header header"
+								"menu menu"
+								"article footer"
+								"section footer"
+								"section footer";
 
 	}
 }
-
 article{
-	background: $white;
 	grid-area: article;
-	clear: both;
+	background: $one;
+	padding: 1em 1.5em 1em 1.5em;
 	p{
-		color:$grey;
-		letter-spacing: 0.1em;
+		color:$four;
+		text-align: justify;
+	}
+	@media (min-width: $large){
+		padding: 1em 2em 1em 2em;
+		p{
+			text-align: left;
+		}
 	}
 }
-.about{
-	padding: 10px 45px 10px 20px;
-}
-
-.furniture{
-	min-height: 150px;
-	height: 100%;
-	text-align: center;
-	border: 1px solid $orange;
-	@include display-flex;
-	@include align-items(center);
-    @include justify-content(center);
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	height: 100px;
-    	min-height: 200px;
+section{
+	grid-area: section;
+	padding: 1em;
+	min-height: 16em;
+	position: relative;
+	@media (min-width: $small){
+		min-height: 18em;
+	}
+	@media (min-width: $medium){
+		min-height: 20em;
+	}
+	img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: auto;
+		height: 90%;
+		transform: translate(-50%, -50%);
+		box-shadow: 1em 1em 1em 0 rgba($four,.75);
+		margin: auto;
 	}
 }
-.sofa{
-	@include furniture-background('../images/sof.jpg');
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	@include furniture-background('../images/sofie.jpg');
-	}
-	grid-area: sofa;
-}
-.corner{
-	@include furniture-background('../images/naroznik.jpg');
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	@include furniture-background('../images/naroznikie.jpg');
-	}
-	grid-area: corner;
-}
-.sofa3{
-	@include furniture-background('../images/sof3d.jpg');
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	@include furniture-background('../images/sof3die.jpg');
-	}
-	grid-area: sofa3;
-}
-.bed{
-	@include furniture-background('../images/lozko.jpg');
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    	@include furniture-background('../images/lozkoie.jpg');
-	}
-	grid-area: bed;
-}
-
 footer{
-	padding: 10px;
-	background: $light-grey;
 	grid-area: footer;
+	background: $four;
+	padding: 1em;
 	p{
-		color:$grey;
+		color: white;
 	}
-}
-.contact{
-	width: 100%;
-	padding-bottom: 10px;
-}
-.contact-img{
-	height: 20px;
-	width: 20px;
-	float: left;
-	margin-right: 5px;
-	clear: both;
-}
-.info{
-	padding-bottom: 10px;
-}
-.info-p{
-	overflow: auto;
-	text-align: left;
-}
-.contact-link{
-	@extend .link;
-	color: $grey;
-}
-
-#map{
-	width: 100%;
-	height: 15em;
-	max-height: 300px;
+	.contact-header{
+		font-size: 1.5em;
+		font-family: "Lora";
+		color: $three;
+		padding-bottom: .5em;
+	}
+	.contact-link{
+		display: inline-block;
+		vertical-align: middle;
+		color: white;
+		padding: .5em 0;
+		span{
+			display: inline;
+			vertical-align: middle;
+			padding-right: .4em;
+		}
+	}
+	.map-container{
+		padding-top: .5em;
+		width: 100%;
+		height: 15em;
+		max-height: 19em;
+	}
 }
