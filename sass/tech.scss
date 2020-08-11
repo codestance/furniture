@@ -1,14 +1,18 @@
 @import '_reset';
-@import '_variables';
-@import '_nav';
 @import '_base';
-
 section{
     display: flex;
     padding: 1em;
+    flex-direction: column;
+    @media(min-width: $medium){
+        flex-direction: row;
+    }
     div{
-        flex: 50%;
-        padding: 0 1em;
+        padding: 0 1em 1em 0;
+        @media(min-width: $medium){
+            flex: 50%;
+            padding: 0 1em;
+        }
         ul{
             list-style: none;
         }
