@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/tech.css">
 </head>
 <body>
-	<nav>
-		<button class="btn-menu" type="button" id="btn">
+	<nav aria-label="mobile menu">
+		<button class="btn-menu" type="button" id="btn" value="menu">
 			<span class="menu-span"></span>
 			<span class="menu-span"></span>
 			<span class="menu-span"></span>
@@ -30,14 +30,16 @@
 				<h1>Meble Kraszewice</h1>
 			</div>
 		</header>
-		<ul class="menu-landscape">
-			<a href="index.html" class="menu-link"><li class="menu-item">Strona główna</li></a>
-			<a href="technologia.html" class="menu-link"><li class="menu-item">Technologia</li></a>
-			<a href="sofy.html" class="menu-link"><li class="menu-item">Sofy</li></a>
-			<a href="narozniki.html" class="menu-link"><li class="menu-item">Narożniki</li></a>
-			<a href="sofy3dl.html" class="menu-link"><li class="menu-item">Sofy 3DL</li></a>
-			<a href="kanapy-lozka.html" class="menu-link"><li class="menu-item">Kanapy i łóżka</li></a>
-        </ul>
+		<nav class="nav-landscape" aria-label="landscape menu">
+			<ul class="menu-landscape">
+				<a href="index.html" class="menu-link"><li class="menu-item">Strona główna</li></a>
+				<a href="technologia.html" class="menu-link"><li class="menu-item">Technologia</li></a>
+				<a href="sofy.html" class="menu-link"><li class="menu-item">Sofy</li></a>
+				<a href="narozniki.html" class="menu-link"><li class="menu-item">Narożniki</li></a>
+				<a href="sofy3dl.html" class="menu-link"><li class="menu-item">Sofy 3DL</li></a>
+				<a href="kanapy-lozka.html" class="menu-link"><li class="menu-item">Kanapy i łóżka</li></a>
+			</ul>
+		</nav>
 		<section>
 			<div>
 				<p>
